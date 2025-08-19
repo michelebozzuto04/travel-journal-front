@@ -1,29 +1,32 @@
 import React, { useEffect, useState } from 'react'
+import './HomePage.css'
 
 function HomePage() {
 
-    const moments_api_url = "http://localhost:3000/api/moments";
-    const [moments, setMoments] = useState([]);
-    const [loading, setLoading] = useState();
-
-    useEffect(() => {
-        fetch(moments_api_url)
-            .then(res => res.json())
-            .then(data => setMoments(data))
-
-        moments.length !== null && setLoading(false)
-    }, [])
+    const videos = [
+        'src/assets/videos/video1.mp4',
+        'src/assets/videos/video2.mp4',
+        'src/assets/videos/video3.mp4',
+        'src/assets/videos/video4.mp4',
+    ]
 
     return (
-        <div style={{ width: '100%', backgroundColor: 'black' }}>
-            <h1>HomePage</h1>
-            <ul>
-                {moments.map((moment) => {
-                    return (
-                        <li key={moment.id}>{moment.title}</li>
-                    )
-                })}
-            </ul>
+        <div className='homePageContainer'>
+
+            <div className='contentContainer'>
+                <div className="container">
+                    <h1>Capture Your Journeys, <br /> Relive Your Stories.</h1>
+                    <span>Turn your adventures into timeless journals. <br /> Write, share, and preserve your travel memories in one beautiful place.</span>
+
+                    <div className="homeCTA">
+                        <button className='btn'>Start Your Journal</button>
+                        <button className='btn'>Explore Stories</button>
+                    </div>
+                </div>
+            </div>
+
+            <video className='videoBg' muted loop autoPlay src={videos[Math.floor(Math.random() * videos.length)]} />
+
         </div>
     )
 }

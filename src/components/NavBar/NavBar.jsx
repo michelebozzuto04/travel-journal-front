@@ -47,7 +47,7 @@ function NavBar() {
                 {
                     headerMenu.map((menuItem) => {
                         return (
-                            <li>
+                            <li key={menuItem.id}>
                                 <NavLink to={menuItem.path}>
                                     {pathname == menuItem.path ? menuItem.iconActive : menuItem.icon}
                                 </NavLink>
