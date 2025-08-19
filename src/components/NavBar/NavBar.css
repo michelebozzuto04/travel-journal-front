@@ -1,0 +1,17 @@
+.navBarContainer {
+    width: 70px;
+    height: 100vh;
+}
+
+.menuList {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+
+    a {
+        color: #000;
+    }
+}
