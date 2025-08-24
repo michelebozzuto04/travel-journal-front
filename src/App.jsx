@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage/HomePage'
 import MomentsPage from './pages/MomentsPage/MomentsPage'
 import SingleMomentPage from './pages/SingleMomentPage/SingleMomentPage'
 import PlacesPage from './pages/PlacesPage/PlacesPage'
+import AddPage from './pages/AddPage/AddPage'
 import DefaultLayout from './layouts/DefaultLayout'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route path='/moments' element={<MomentsPage />} />
           <Route path='/moments/:id' element={<SingleMomentPage />} />
           <Route path='/places' element={<PlacesPage />} />
+          <Route path='/add' element={<AddPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

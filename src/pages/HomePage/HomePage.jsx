@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import './HomePage.css'
+import '../../index.css'
 
 function HomePage() {
 
@@ -19,8 +20,10 @@ function HomePage() {
                     <span>Turn your adventures into timeless journals. <br /> Write, share, and preserve your travel memories in one beautiful place.</span>
 
                     <div className="homeCTA">
-                        <button className='btn'>Start Your Journal</button>
-                        <button className='btn'>Explore Stories</button>
+                        <Link to='/add'>
+                            <button className='btn btn-secondary'>Start Your Journal</button>
+                        </Link>
+                        <button className='btn btn-primary'>Explore Stories</button>
                     </div>
                 </div>
             </div>
